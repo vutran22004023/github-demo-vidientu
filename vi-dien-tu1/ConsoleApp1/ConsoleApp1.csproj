@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CHUYEN TIEN.cs" />
+    <Compile Include="CHUYENTIENDENNGANHANG.cs" />
     <Compile Include="CHUYENTIENSANGBANBE.cs" />
     <Compile Include="DANHSACH.cs" />
     <Compile Include="Program.cs" />

@@ -8,6 +8,7 @@ namespace ConsoleApp1
 {
     internal class Program
     {
+        static DANHSACH danhsach;
         static void Main(string[] args)
         {
         }

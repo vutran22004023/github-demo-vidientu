@@ -7,35 +7,30 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-     abstract class CHUYEN_TIEN
+     abstract class CHUYENTIEN
     {
-        protected string nganhang;
         protected int stk;
         protected string ten;
         protected float sotien;
         protected string loinhan;
-        protected float khoandu = 500000;
+        protected float khoandu = 1000000;
 
-        protected string Nganhang { get => this.nganhang; set => this.nganhang = value; }
-        protected int Stk { get => this.stk; set => this.stk = value; }
-        protected string Ten { get => this.ten; set => this.ten = value; }
-        protected float Sotien { get => this.sotien; set => this.sotien = value; }
-        protected string Loinhan { get => this.loinhan; set => this.loinhan = value; }
+        public int Stk { get => this.stk; set => this.stk = value; }
+        public string Ten { get => this.ten; set => this.ten = value; }
+        public float Sotien { get => this.sotien; set => this.sotien = value; }
+        public string Loinhan { get => this.loinhan; set => this.loinhan = value; }
 
-        public CHUYEN_TIEN() { }
+        public CHUYENTIEN() { }
 
-        public CHUYEN_TIEN(string nganhang, int stk, string ten, float sotien, string loinhan)
+        public CHUYENTIEN(int stk, string ten, float sotien, string loinhan)
         {
-            this.Nganhang = nganhang;
-            this.Stk = stk;
-            this.Ten = ten;
-            this.Sotien = sotien;
-            this.Loinhan = loinhan;
+            this.stk = stk;
+            this.ten = ten;
+            this.sotien = sotien;
+            this.loinhan = loinhan;
         }
         public virtual void nhap ()
         {
-            Console.WriteLine("Nhap ngan hang: ");
-            this.nganhang = Console.ReadLine();
             Console.WriteLine("Nhap so tai khoan");
             this.stk = int.Parse(Console.ReadLine());
             Console.WriteLine("Nhap ten: ");
@@ -47,7 +42,6 @@ namespace ConsoleApp1
         }
         public virtual void Xuat ()
         {
-            Console.WriteLine("Ngan hang" + this.nganhang);
             Console.WriteLine("so tai khoan" + this.stk);
             Console.WriteLine("Ten chu tai khoan" + this.ten);
             Console.WriteLine("So tien" + this.sotien);
